@@ -1,90 +1,85 @@
         body {
-            font-family: "Times New Roman", Times, serif;
-            background-color: #f0f9ff;
-            color: #1f2937;
-            font-size: 18px;
+            background-color: white;
+            color: #292929;
         }
 
         .menu {
-            background-color: #e0f2fe;
+            background-color: #bbf0ff;
             text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            
         }
 
         .menu a {
-            color: #0369a1;
+            color: #238392;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 18px;
         }
 
         .menu a:hover {
-            color: #ffffff;
-            background-color: #0284c7;
+            color: white;
+            background-color: #b0f5fe;
         }
 
         h1 {
-            color: #0f766e;
+            color: #068b7a;
             text-align: center;
-            background-color: #ccfbf1;
-            font-size: 32px;
+            background-color: #c9ffdf;
         }
 
         h2 {
-            color: #155e75;
-            font-size: 24px;
+            color: #15679e;
         }
 
         .section {
-            background-color: #ffffff;
+            background-color: white;
         }
 
         .service-item {
-            color: #0f172a;
+            color: black;
         }
 
         .service-item:hover {
-            background-color: #dbeafe;
-            color: #1e40af;
+            background-color: #dbf8f5;
+            color: #4ca1bd;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #ffffff;
-            font-size: 14px;
+            background-color: white;
         }
 
         th {
-            background-color: #bae6fd;
-            color: #075985;
+            background-color: #bbf0ff;
+            color: #4082ce;
         }
 
         td {
-            background-color: #f8fafc;
+            background-color: white;
         }
-
+        
         th,
         td {
-            border: 1px solid #475569;
-            padding: 20px;
+            border: 1px solid black;
+            padding: 15px;
         }
 
         tr:hover td {
-            background-color: #e0f2fe;
+            background-color: #c4f7ff;
         }
 
         .section {
-            background-color: #ffffff;
+            background-color: white;
         }
 
         .section form {
-            background-color: #f8fafc;
+            background-color: #ededed;
             text-align: center;
         }
 
         .section form label {
             display: block;
-            color: #134e4a;
             font-size: 18px;
             font-weight: bold;
         }
@@ -93,37 +88,26 @@
         .section form select,
         .section form textarea {
             display: inline-block;
-            font-size: 18px;
         }
 
         .section form input:focus,
         .section form select:focus,
         .section form textarea:focus {
-            background-color: #ecfeff;
-        }
-
-        .section form textarea::placeholder {
-            color: #64748b;
+            background-color: white;
         }
 
         .section form input[type="submit"] {
-            background-color: #0ea5a4;
+            background-color: aqua;
             color: white;
-            font-size: 20px;
             font-weight: bold;
         }
 
         .section form input[type="submit"]:hover {
-            background-color: #0f766e;
+            background-color: green;
         }
 
         .footer {
-            background-color: #0f766e;
-            color: #f0fdfa;
+            background-color: #15b99d;
             text-align: center;
-            font-size: 16px;
-        }
-
-        .footer p {
-            margin: 4px 0;
+            color: white;
         }
