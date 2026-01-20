@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f5f0;
+            color: #333;
+            line-height: 1.7;
+        }
+
+
+        header {
+            background: #1e1e1e;
+            padding: 25px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        header h1 {
+            color: #d4af37;
+            font-size: 32px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+
+
+        .hero {
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: image("Downloads/bda3e7d064464cd7f2c9fc4b4ee5de38890ed225.jpg");
+        }
+
+        .hero-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background: #d4af37;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background: #b8972e;
+        }
+
+
+        .featured {
+            padding: 120px 40px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .featured h2 {
+            font-size: 48px;
+            color: #1e1e1e;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .dishes-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 33px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .dish-item {
+            flex: 1 1 300px;
+            max-width: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .dish-item:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .dish-item img {
+            width: 100%;
+            height: 350px;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 30px;
+            color: white;
+
+        }
+
+        .overlay h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .overlay .price {
+            font-size: 24px;
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        .about {
+            padding: 120px 40px;
+            background: #1e1e1e;
+            color: #ddd;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 48px;
+            color: #d4af37;
+            margin-bottom: 40px;
+        }
+
+        .about p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <h1>Gourmet</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-div">
+            <h2>Trải Nghiệm Ẩm Thực Đỉnh Cao</h2>
+            <p>
+                Những món ăn tinh tế được chế biến từ nguyên liệu tươi ngon nhất, 
+                mang đến hương vị khó quên cho thực khách.
+            </p>
+            <a href="#" class="btn">Khám Phá Menu</a>
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2>Món Ăn Nổi Bật</h2>
+        <div class="dishes-grid">
+            <div class="dish-item">
+                <img src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                    alt="Seared Foie Gras">
+                <div class="overlay">
+                    <h3>Seared Foie Gras</h3>
+                    <p class="price">580.000 ₫</p>
+                </div>
+            </div>
+            <div class="dish-item">
+                <img src="https://images.immediate.co.uk/production/volatile/sites/30/2012/09/Beef-wellington-d4f3320.jpg"
+                    alt="Beef Wellington">
+                <div class="overlay">
+                    <h3>Classic Beef Wellington</h3>
+                    <p class="price">1.200.000 ₫</p>
+                </div>
+            </div>
+            <div class="dish-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Lobster_Thermidor_entree.jpg/330px-Lobster_Thermidor_entree.jpg"
+                    alt="Lobster Thermidor">
+                <div class="overlay">
+                    <h3>Lobster Thermidor</h3>
+                    <p class="price">950.000 ₫</p>
+                </div>
+            </div>
+            <div class="dish-item">
+                <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                    alt="Grilled Lamb Chops">
+                <div class="overlay">
+                    <h3>Grilled Lamb Chops</h3>
+                    <p class="price">780.000 ₫</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Về Chúng Tôi</h2>
+        <p>Nhà hàng Gourmet là nơi hội tụ của nghệ thuật ẩm thực và sự tinh tế. Với đội ngũ đầu bếp giàu kinh nghiệm và
+            niềm đam mê bất tận, chúng tôi mang đến những món ăn không chỉ ngon miệng mà còn là một trải nghiệm thị giác
+            và cảm xúc đáng nhớ.</p>
+    </section>
+
+    <footer>
+        &copy; 2025 Nhà Hàng Gourmet. Tất cả quyền được bảo lưu.
+    </footer>
+</body>
+</html>
