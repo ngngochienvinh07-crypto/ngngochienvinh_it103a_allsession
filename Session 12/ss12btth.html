@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fc;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+            color: white;
+            padding: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            box-shadow: 0 32px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            font-size:24px;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: white;
+            flex: 1;
+            outline: none;
+        }
+
+        .nav-desktop {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-desktop a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            background: white;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -240px;
+            padding: 24px 16px;
+            box-shadow: 32px 0 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 15;
+            transition: left 0.3s;
+        }
+
+        .user {
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 16px solid #eee;
+        }
+
+        .avatar {
+            width: 70px;
+            height: 70px;
+            background: #0d6efd;
+            border-radius: 50%;
+            margin: 0 auto 12px;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            color: #444;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .sidebar a:hover {
+            background: #e9f0ff;
+            color: #0d6efd;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 10;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        /* Main */
+        main {
+            margin-left: 240px;
+            padding: 32px;
+            max-width: 1200px;
+            transition: all 0.3s;
+        }
+
+        .welcome {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 68%;
+            background: #0d6efd;
+            transition: width 0.5s;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin: 24px 0 16px;
+            color: #0d6efd;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 7px;
+            margin-top: 12px;
+            background: #0d6efd;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1285px) {
+            main {
+                margin-left: 0;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-desktop,
+            .search-bar {
+                display: none;
+            }
+
+            .sidebar {
+                left: -240px;
+            }
+
+            main {
+                margin-left: 0;
+                padding: 7px;
+            }
+
+            .welcome {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">Elearning</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm khóa học...">
+            </div>
+            <nav class="nav-desktop">
+                <a href="#">Khóa học</a>
+                <a href="#">Tiến độ</a>
+                <a href="#">Hồ sơ</a>
+            </nav>
+            <label for="menu" class="hamburger">☰</label>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <div>
+                <h2>Xin chào, Bạn tôi!</h2>
+                <p>Chúc bạn học tập hiệu quả hôm nay</p>
+            </div>
+            <div>
+                <p style="margin-bottom:0.5px;">Tiến độ tổng: 68%</p>
+                <progress value="68" max="100"></progress>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Khóa học đang học</h3>
+            <div class="grid">
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card-body">
+                        <h4>CSS Flexbox & Grid</h4>
+                        <p style="color:#666; font-size:0.95px;">Hoàn thành: 85%</p>
+                        <a href="#" class="btn">Tiếp tục học</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card-body">
+                        <h4>JavaScript Cơ bản</h4>
+                        <p style="color:#666; font-size:0.95px;">Hoàn thành: 42%</p>
+                        <a href="#" class="btn">Tiếp tục học</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card-body">
+                        <h4>Responsive Web Design</h4>
+                        <p style="color:#666; font-size:0.95px;">Hoàn thành: 95%</p>
+                        <a href="#" class="btn">Tiếp tục học</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title">Khóa học gợi ý</h3>
+            <div class="grid">
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card-body">
+                        <h4>React cho người mới</h4>
+                        <p style="color:#666; font-size:0.9px;">Bắt đầu ngay hôm nay</p>
+                        <a href="#" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card-body">
+                        <h4>Python Cơ bản</h4>
+                        <p style="color:#666; font-size:0.9px;">Phù hợp beginner</p>
+                        <a href="#" class="btn">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>
