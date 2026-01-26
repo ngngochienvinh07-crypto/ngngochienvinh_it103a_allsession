@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Khóa học của tôi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo .rk {
+    color: #e53935;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.logo .edu {
+    color: #333;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #777;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu a {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+}
+
+.menu a.active {
+    background: #eef2ff;
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+.user {
+    margin-top: auto;
+    text-align: center;
+}
+
+.user img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.content {
+    flex: 1;
+    padding: 60px;
+    background: linear-gradient(180deg, #5f6dfb, #6a5cf5);
+    color: white;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.content p {
+    font-size: 18px;
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .content {
+        padding: 40px 20px;
+    }
+}
+    </style>
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="rk">RK</span><span class="edu">Edu</span>
+            <p>where dreams come true</p>
+        </div>
+
+        <nav class="menu">
+            <a href="#">Trang chủ</a>
+            <a href="#">Khóa học</a>
+            <a href="#" class="active">Khóa học của tôi</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+
+        <div class="user">
+            <img src="https://i.pravatar.cc/100" alt="">
+            <p>Nguyễn Văn A</p>
+        </div>
+    </aside>
+
+    <main class="content">
+        <h1>Khóa Học Của Tôi</h1>
+        <p>Tiếp tục hành trình học tập và phát triển kỹ năng của bạn</p>
+    </main>
+</div>
+
+</body>
+</html>

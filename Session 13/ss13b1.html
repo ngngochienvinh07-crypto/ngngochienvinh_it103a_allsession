@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f7fb;
+}
+
+.register-form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.register-form h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.row input {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #1e6bff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1557d6;
+}
+
+.login-text {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: #1e6bff;
+    text-decoration: none;
+}
+
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .register-form {
+        margin: 16px;
+        padding: 24px;
+    }
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form class="register-form">
+        <h1>Đăng ký</h1>
+        <p class="subtitle">Tạo tài khoản để bắt đầu học tập trên hệ thống e-learning</p>
+
+        <div class="row">
+            <input type="text" placeholder="Họ và tên đệm">
+            <input type="text" placeholder="Tên đầy đủ">
+        </div>
+
+        <input type="text" placeholder="Số điện thoại">
+        <input type="email" placeholder="Nhập địa chỉ email">
+        <input type="password" placeholder="Nhập mật khẩu">
+        <input type="password" placeholder="Nhập lại mật khẩu">
+
+        <button type="submit">Đăng ký</button>
+
+        <p class="login-text">
+            Đã có tài khoản? <a href="#">Đăng nhập</a>
+        </p>
+    </form>
+</div>
+
+</body>
+</html>

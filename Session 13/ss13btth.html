@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>IT Course</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+.header {
+    background: #1f2933;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 30px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu {
+    display: none;
+    font-size: 22px;
+}
+
+.hero {
+    background: #1670f0;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 26px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.features h3 {
+    margin: 14px 0 6px;
+}
+
+.features p {
+    font-size: 14px;
+    color: #555;
+}
+
+.register {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.register h2 {
+    margin-bottom: 20px;
+}
+
+.register input {
+    width: 300px;
+    max-width: 90%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.submit {
+    background: #198754;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 300px;
+    max-width: 90%;
+    border-radius: 6px;
+}
+
+.footer {
+    background: #1f2933;
+    color: white;
+    text-align: center;
+    padding: 14px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+}
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">IT Course</div>
+    <nav class="nav">
+        <a>Trang chủ</a>
+        <a>Khóa học</a>
+        <a>Liên hệ</a>
+    </nav>
+    <div class="menu">&#9776;</div>
+</header>
+
+<section class="hero">
+    <h1>Trở thành lập trình viên chuyên nghiệp</h1>
+    <p>Học ngay hôm nay để đón đầu xu hướng công nghệ</p>
+    <button>Đăng ký ngay</button>
+</section>
+
+<section class="features">
+    <div class="item">
+        <i class="bi bi-laptop fs-1 text-primary"></i>
+        <h3>Công nghệ hiện đại</h3>
+        <p>Cập nhật liên tục theo xu hướng mới nhất</p>
+    </div>
+
+    <div class="item">
+        <i class="bi bi-people fs-1 text-success"></i>
+        <h3>Học cùng chuyên gia</h3>
+        <p>Giảng viên là các lập trình viên có kinh nghiệm</p>
+    </div>
+
+    <div class="item">
+        <i class="bi bi-briefcase fs-1 text-danger"></i>
+        <h3>Cơ hội việc làm</h3>
+        <p>Kết nối doanh nghiệp, đảm bảo thực tập & việc làm</p>
+    </div>
+</section>
+
+<section class="register">
+    <h2>Đăng ký nhận tư vấn</h2>
+    <input type="text" placeholder="Họ và tên">
+    <input type="email" placeholder="Email">
+    <button class="submit">Gửi đăng ký</button>
+</section>
+
+<footer class="footer">
+    © 2025 IT Course. All rights reserved.
+</footer>
+
+</body>
+</html>
